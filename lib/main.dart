@@ -1,10 +1,15 @@
+import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_xpense_website/pages/home_page.dart';
 import 'package:flutter_xpense_website/utils/colors.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(DevicePreview(
+      enabled: true,
+      builder: (context) {
+        return const MyApp();
+      }));
 }
 
 class MyApp extends StatelessWidget {
@@ -14,10 +19,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      locale: DevicePreview.locale(context),
+      builder: DevicePreview.appBuilder,
       title: 'X-Pense',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        
         primaryColor: AppColors.primaryColor,
         brightness: Brightness.light,
         useMaterial3: true,

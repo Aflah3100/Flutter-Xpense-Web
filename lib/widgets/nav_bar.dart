@@ -17,6 +17,9 @@ class Navbar extends StatelessWidget {
       mobile: (context) {
         return SafeArea(child: MobileNavBar());
       },
+      tablet: (context) {
+        return SafeArea(child: MobileNavBar());
+      },
     );
   }
 }
@@ -67,7 +70,7 @@ Widget DesktopNavBar() {
 Widget NavBarElevatedButton() {
   return InkWell(
     focusColor: Colors.white70,
-    onTap: (){},
+    onTap: () {},
     child: Container(
       height: 40,
       padding: const EdgeInsets.all(10),
