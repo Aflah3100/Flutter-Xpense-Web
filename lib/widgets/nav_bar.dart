@@ -22,81 +22,81 @@ class Navbar extends StatelessWidget {
       },
     );
   }
-}
 
-Widget MobileNavBar() {
-  return Container(
-    height: 55,
-    padding: const EdgeInsets.symmetric(horizontal: 10),
-    child: Row(
-      children: [
-        Flexible(
-          flex: 1,
-          child: IconButton(onPressed: () {}, icon: const Icon(Icons.menu)),
-        ),
-        Flexible(
-          flex: 5,
-          child: Center(
-            child: Image.asset(appLogo),
+  Widget MobileNavBar() {
+    return Container(
+      height: 55,
+      padding: const EdgeInsets.symmetric(horizontal: 10),
+      child: Row(
+        children: [
+          Flexible(
+            flex: 1,
+            child: IconButton(onPressed: () {}, icon: const Icon(Icons.menu)),
           ),
-        ),
-      ],
-    ),
-  );
-}
-
-Widget DesktopNavBar() {
-  return Container(
-    height: 50,
-    margin: const EdgeInsets.only(top: 15),
-    child: Row(
-      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-      children: [
-        Image.asset(appLogo),
-        Row(
-          children: [
-            NavBarTextButton(label: 'Features'),
-            NavBarTextButton(label: 'About us'),
-            NavBarTextButton(label: 'Pricing'),
-            NavBarTextButton(label: 'Feedback'),
-          ],
-        ),
-        NavBarElevatedButton()
-      ],
-    ),
-  );
-}
-
-Widget NavBarElevatedButton() {
-  return InkWell(
-    focusColor: Colors.white70,
-    onTap: () {},
-    child: Container(
-      height: 40,
-      padding: const EdgeInsets.all(10),
-      decoration: BoxDecoration(
-          border: Border.all(
-            color: AppColors.primaryColor,
+          Flexible(
+            flex: 5,
+            child: Center(
+              child: Image.asset(appLogo),
+            ),
           ),
-          borderRadius: BorderRadius.circular(5.0)),
-      child: const Center(
-        child: Text(
-          'Request a demo',
-          style: TextStyle(color: AppColors.primaryColor),
+        ],
+      ),
+    );
+  }
+
+  Widget DesktopNavBar() {
+    return Container(
+      height: 50,
+      margin: const EdgeInsets.only(top: 15),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          Image.asset(appLogo),
+          Row(
+            children: [
+              NavBarTextButton(label: 'Features'),
+              NavBarTextButton(label: 'About us'),
+              NavBarTextButton(label: 'Pricing'),
+              NavBarTextButton(label: 'Feedback'),
+            ],
+          ),
+          NavBarElevatedButton()
+        ],
+      ),
+    );
+  }
+
+  Widget NavBarElevatedButton() {
+    return InkWell(
+      focusColor: Colors.white70,
+      onTap: () {},
+      child: Container(
+        height: 40,
+        padding: const EdgeInsets.all(10),
+        decoration: BoxDecoration(
+            border: Border.all(
+              color: AppColors.primaryColor,
+            ),
+            borderRadius: BorderRadius.circular(5.0)),
+        child: const Center(
+          child: Text(
+            'Request a demo',
+            style: TextStyle(color: AppColors.primaryColor),
+          ),
         ),
       ),
-    ),
-  );
-}
+    );
+  }
 
-Widget NavBarTextButton({required String label}) {
-  return Container(
-    margin: const EdgeInsets.symmetric(horizontal: 15),
-    child: TextButton(
-        onPressed: () {},
-        child: Text(
-          label,
-          style: const TextStyle(color: Colors.black),
-        )),
-  );
+  Widget NavBarTextButton({required String label}) {
+    return Container(
+      margin: const EdgeInsets.symmetric(horizontal: 15),
+      child: TextButton(
+          onPressed: () {},
+          child: Text(
+            label,
+            style: const TextStyle(color: Colors.black),
+          )),
+    );
+  }
 }

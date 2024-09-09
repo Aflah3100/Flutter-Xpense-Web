@@ -12,8 +12,9 @@ class Container1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenTypeLayout.builder(
-      desktop: (context) => DesktopContainer1(),
+      desktop: (context ) => DesktopContainer1(),
       mobile: (context) => Mobilecontainer1(),
+      tablet: (context) => Mobilecontainer1(),
     );
   }
 
@@ -23,7 +24,6 @@ class Container1 extends StatelessWidget {
         children: [
           //image
           SizedBox(
-              // color: Colors.green,
               height: screenWidth! / 1.2,
               width: screenWidth! / 1.2,
               child: Image.asset(

@@ -1,4 +1,12 @@
 double? screenWidth;
 double? screenHeight;
 String appLogo = 'assets/images/logo.png';
-String illuStration1='assets/images/illustration1.png';
+String illuStration1 = 'assets/images/illustration1.png';
+String dashBoard = 'assets/images/dashboard.png';
+String cocaCola = 'assets/images/cocacola.png';
+String facebook = 'assets/images/fb.png';
+String google = 'assets/images/google.png';
+String linkedIn = 'assets/images/linkedin.png';
+String samsung = 'assets/images/samsung.png';
+String vector1 = 'assets/images/vector.png';
+String vector2 = 'assets/images/vector1.png';
