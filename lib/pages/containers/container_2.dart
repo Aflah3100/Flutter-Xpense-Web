@@ -67,10 +67,6 @@ class Container2 extends StatelessWidget {
                 ImageContainer(imageAsset: cocaCola),
                 ImageContainer(imageAsset: linkedIn),
                 ImageContainer(imageAsset: samsung)
-                // Image.asset(google),
-                // Image.asset(cocaCola),
-                // Image.asset(linkedIn),
-                // Image.asset(samsung)
               ],
             ),
           )
@@ -98,7 +94,7 @@ Widget TabletContainer2() {
               child: SizedBox(height: 400, child: Image.asset(vector1)),
             ),
             Container(
-              margin: const EdgeInsets.only(left: 20,right: 20,top: 30),
+              margin: const EdgeInsets.only(left: 20, right: 20, top: 30),
               width: double.infinity,
               height: 400,
               decoration: BoxDecoration(
@@ -180,31 +176,31 @@ Widget MobileContainer2() {
         //Container-2
 
         Container(
-          margin: const EdgeInsets.symmetric(vertical: 20),
+          height: 120,
           width: screenWidth,
           decoration: const BoxDecoration(color: Colors.white),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          child: ListView(
+            scrollDirection: Axis.horizontal,
             children: [
               ImageContainer(
                 imageAsset: facebook,
               ),
               const SizedBox(
-                height: 20,
+                width: 20,
               ),
               ImageContainer(
                 imageAsset: google,
               ),
               const SizedBox(
-                height: 20,
+                width: 20,
               ),
               ImageContainer(imageAsset: cocaCola),
               const SizedBox(
-                height: 20,
+                width: 20,
               ),
               ImageContainer(imageAsset: linkedIn),
               const SizedBox(
-                height: 20,
+                width: 20,
               ),
               ImageContainer(imageAsset: samsung)
             ],

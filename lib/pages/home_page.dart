@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_xpense_website/constants/constants.dart';
 import 'package:flutter_xpense_website/pages/containers/container_1.dart';
 import 'package:flutter_xpense_website/pages/containers/container_2.dart';
+import 'package:flutter_xpense_website/pages/containers/container_3.dart';
 import 'package:flutter_xpense_website/widgets/nav_bar.dart';
 
 class HomePage extends StatelessWidget {
@@ -16,7 +17,12 @@ class HomePage extends StatelessWidget {
       body: SingleChildScrollView(
         child: Container(
           child: Column(
-            children: [Navbar(), Container1(),Container2()],
+            children: [
+              Navbar(),
+              Container1(),
+              Container2(),
+              Container3(),
+            ],
           ),
         ),
       ),
